@@ -1,0 +1,788 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SUITE', sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    color: #1e1e1e;
+    min-width: 1450px;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-button{
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    background: #CDA85F;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: none;
+    background: transparent;
+}
+
+/* 폭 1420px */
+
+#loginbenefitbg {
+    background-color: #F3E8CB;
+    color: #CDA85F;
+    text-align: center;
+    align-content: center;
+    height: 32px;
+}
+
+.loginbenefit {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.scrollTop {
+    position:fixed;
+    bottom:10px;
+    right:20px;
+    width:3vw;
+    z-index: 100;
+}
+    
+.scrollTop a{
+    display:inline-block;
+    padding:10px 15px;
+    background:#000;
+    color:#fff;
+    margin-bottom:5px;
+    border-radius:50%;
+}
+
+#header {
+    width: 1420px;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    width: 10%;
+    margin: 0 auto;
+    padding: 50px 0 30px;
+    box-sizing: border-box;
+}
+
+.search {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    z-index: 99;
+    /* 헤더에 .search가 들어가서 .gnb 아래에 깔려 검색기능이
+    되지 않기에 z-index 가 필요. */
+}
+
+.search input {
+    width: 164px;
+    height: 29px;
+    border-radius: 20px;
+    font-family: 'SUITE-Regular';
+    font-size: 15px;
+    padding-left: 10px;
+    background-color: none;
+    border-color: #1e1e1e50;
+}
+
+input:focus {
+    border: 2px solid #1e1e1e50;
+    /* 포커스 상태에서도 동일한 테두리 설정 */
+    outline: none;
+    /* 포커스 시 기본 outline 제거 */
+}
+
+.search img {
+    width: 25px;
+    padding-top: 2px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    opacity: 25%;
+}
+
+.sideicon_link {
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    display: flex;
+    width: 134px;
+    justify-content: space-around;
+}
+
+.sideicon_link>li {
+    width: 20%;
+    position: relative;
+}
+
+.sideicon_color {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.sideicon_link>li:hover .sideicon_color {
+    opacity: 1;
+}
+
+.sideicon_link>li:hover .sideicon {
+    opacity: 0;
+}
+
+
+
+/* 메뉴 시작 */
+
+#gnbwrap {
+    height: 61px;
+    padding-bottom: 13px;
+}
+
+.gnb {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.origin_gnb>li {
+    width: 12%;
+}
+
+.gnb>li>a {
+    padding: 20px 0 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.lnb_bg {
+    position: absolute;
+    top: 272px;
+    left: 0;
+    z-index: 10;
+    height: 370px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    display: block;
+    background-color: #f9f5e9e0;
+    box-shadow: 0px 13px 10px #F3E8CB80 inset;
+}
+
+.lnb {
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 50;
+}
+
+.lnb>ul>li>a {
+    padding: 8px 10px;
+}
+
+.lnb>ul>li a:hover {
+    font-weight: 600;
+    color: #CDA85F;
+}
+
+.seemore {
+    width: 20%;
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.seemore_color {
+    position: relative;
+    top: -55px;
+    width: 20.7%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.seemore_color:hover {
+    opacity: 1;
+}
+
+.seemore_color:hover .seemore{
+    display: none;
+}
+
+.gnb_above {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.search_wrap{
+    position: relative;
+}
+
+.lnb_img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 150px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.lnb_menu_glance {
+    position: absolute;
+    top: 50px;
+    left: -270px;
+    width: 250px;
+    height: 260px;
+    text-align: center;
+    line-height: 20px;
+    border-right: #CDA85F 2px dashed;
+}
+
+.lnb_menu_glance h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #CDA85F;
+    padding-bottom: 8px;
+}
+
+.lnb_menu_glance p {
+    font-size: 13px;
+}
+
+#header2 {
+    width: 100%;
+    height: 110px;
+    transition: top 0.2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+.header2_logo {
+    width: 9%;
+    padding: 15px 0 0;
+    box-sizing: border-box;
+}
+
+#header2_inner{
+    width: 1420px;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+}
+
+.header2_sideicon_link{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    display: flex;
+    width: 134px;
+    justify-content: space-around;
+}
+
+.header2_gnb_above{
+    width: 100%;
+    position: relative;
+}
+
+.header2_gnb{
+    width: 1020px;
+    margin: 0 auto;
+    transform: translateY(-70px);
+}
+
+.header2_gnb>li {
+    width: 16.7%;
+}
+
+.header2_lnb_bg{
+    position: absolute;
+    top: 83px;
+    left: 0;
+    height: 370px;
+    /* 최고다 */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* 페이지 전체 너비 쓰기 */
+    display: block;    
+    background-color: #f9f5e9e0;
+    box-shadow: 0px 13px 10px #F3E8CB80 inset;
+}
+
+.header2_lnb{
+    padding-top: 50px;
+}
+
+.nav-up {
+    top: -110px !important;
+    /*헤더 높이와 같이*/
+  }
+
+  .nav-down {
+    top: 0px !important;
+  }
+
+/* 메뉴 끝 */
+
+
+.logo_white {
+    width: 93px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.footerbg {
+    height: 393px;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+#footer {
+    width: 1420px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.logo_white2 {
+    width: 20%;
+    padding: 50px 0 30px;
+    box-sizing: border-box;
+}
+
+#footer ul {
+    padding-bottom: 30px;
+}
+
+.footer_left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sns {
+    float: right;
+    margin-top: 50px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns li {
+    width: 45px;
+    position: relative;
+}
+
+.footer_icon {
+    opacity: 20%;
+}
+
+.footer_coloricon {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.footer_right li:hover .footer_coloricon {
+    opacity: 1;
+}
+
+.footer_rightlink {
+    width: 346px;
+    justify-content: space-between;
+    display: flex;
+    float: right;
+}
+
+.footer_rightlink li {
+    padding-bottom: 10px;
+}
+
+.footer_rightlink h3 {
+    color: #FED5A3;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.footer_rightlink p:hover {
+    text-decoration: underline;
+}
+
+/* COMMON CSS END */
+
+
+#content1 {
+    height: fit-content;
+    background-color: #f3e8cb88;
+}
+
+#content1 video{
+    width: 1910px;
+    margin: 0 auto;
+    display: block;
+}
+
+video{
+    display: block;
+}
+
+#content2{
+    height: 1066px;
+    background-image: url(../images/texture_paper.jpg);
+    background-color: rgba(255, 255, 255, 0.57);
+    background-blend-mode: lighten;
+}
+
+.content2_leave_shadow{
+    width: 1910px;
+    margin: 0 auto;
+    height: 100%;
+    background-image: url(../images/shadows_2.png);
+    background-size: cover;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    align-content: center;
+}
+
+.content_title{
+    font-family: "Cormorant Infant";
+    font-weight: 600;
+    font-size: 51px;
+    text-align: center;
+}
+
+.content_subtitle{
+    font-family: "Cormorant Infant";
+    font-weight: 300;
+    font-size: 27px;
+    padding-top: 33px;
+    color: #6B6866;
+    text-align: center;
+}
+
+.content2_text{
+    padding-bottom: 40px;
+}
+
+.content2_text2{
+    padding-bottom: 30px;
+}
+
+#content3{
+    width: 100%;
+    text-align: center;
+    background-image: url(../images/brand_identity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    align-content: center;
+    box-sizing: border-box;    
+}
+
+.content3_start{
+    height: 350px;
+    background-position: center 14%;
+}
+
+.content_textwrap{
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.content3_title_white{
+    font-family: "Cormorant Infant";
+    font-weight: 600;
+    font-size: 51px;
+    color: white;
+}
+
+.content3_subtitle{
+    font-family: "Cormorant Infant";
+    font-weight: 300;
+    font-size: 27px;
+    padding-top: 33px;
+    color: #EDEBEB;
+}
+
+#content4{
+    height: 473px;
+    background-image: url(../images/texture_paper.jpg);
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0.57);
+    background-blend-mode: lighten;
+}
+
+.content4_leave_shadow{
+    width: 1910px;
+    margin: 0 auto;
+    height: 100%;
+    background-image: url(../images/shadow_top_sharp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 -30px;
+    font-size: 15px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content4_textbox, .content4_textbox2{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.content4_textbox{
+    padding-bottom: 30px;
+    transform: translate(-150px, -30px);
+}
+
+.content4_textbox2{
+    transform: translate(60px, -15px);
+}
+
+.content4_T{
+    font-size: 24px;
+    padding-bottom: 10px;    
+}
+
+.content4_D{
+    padding-left: 40px;
+}
+
+.content3_end{
+    height: 450px;
+    background-position: center 46.4%;
+}
+
+#content5{
+    height: 350px;
+    background-image: url(../images/texture_paper.png);
+    background-blend-mode: lighten;
+    background-position: center 0px;
+    transform: scaleY(-1);
+}
+
+#content6{
+    width: 100%;
+    height: 780px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#content6 img{
+    width: 710px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 30px;
+}
+
+#content7{
+    width: 1910px;
+    margin: 0 auto;
+    height: 1030px;
+    background-image: url(../images/shadow_bottom_sharp.png);
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: right bottom;
+}
+
+.benefit_wrap{
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.benefit {
+    display: flex;
+    width: 550px;
+    height: 175px;
+    
+}
+
+.benefit:nth-child(2){
+    padding: 65px 0;
+}
+
+.benefit_text {
+    line-height: 24px;
+    position: relative;
+    font-weight: 400;
+}
+
+.benefit_text h2 {
+    color: #231E39;
+    font-size: 23px;
+    padding-bottom: 10px;
+}
+
+.benefit_text p {
+    font-size: 16px;
+}
+
+.benefit img {
+    width: 150px;
+    border-radius: 28px;
+    margin-right: 40px;
+}
+
+.benefit_descriptioin {
+    position: absolute;
+    bottom: 0;
+}
+
+.bd1 {
+    color: #FFC278;
+}
+
+.bd2 {
+    color: #F59091;
+}
+
+.bd3 {
+    color: #3D7C8A;
+}
+
+.c7b2{
+    margin-left: 370px;
+}
+
+.c7b3{
+    margin-left: 720px;
+}
+
+@keyframes fadeInLeft{
+    0%{
+        position: relative;
+        transform: translateX(0%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(50%);
+        opacity: 1;
+    }
+}
+
+#content8{
+    width: 1910px;
+    margin: 0 auto;
+    align-content: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding-top: 125px;
+    overflow: hidden;
+}
+
+.bgtext{
+    font-family: "Cormorant Infant";
+    font-weight: 100;
+    font-size: 270px;
+    color: #f3f3f3;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.bgtext1{
+    text-align: right;
+}
+
+.brown_title{
+    font-size: 24px;
+    color: #CDA85F;
+    padding-bottom: 60px;
+}
+
+.imgbox{
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 230px;
+    transform: translateY(-20%);
+    overflow: hidden;
+}
+
+.imgbox img{
+    width: 100%;
+    transform: translateY(-8%);
+}
+
+.content8_text{
+    transform: translateY(-20%);
+    line-height: 28px;
+    text-align: center;
+}
+
+#finalContent{
+    width: 100%;
+    height: 874px;
+    background-image: url(../images/endingbanner_modern_minimalist_office.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -100px;
+    text-align: center;
+    box-sizing: border-box;
+    align-content: center;
+    position: relative;
+}
+
+.finalContent_wrap{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 90%);
+}
+
+#finalContent img{
+    width: 210px;
+    margin-bottom: 47px;
+}
+
+#finalContent p{
+        font-family: "Cormorant Infant";
+        font-weight: 300;
+        font-style: italic;
+        font-size: 45px;
+        padding-bottom: 50px;
+        color: white;
+        text-shadow: 0px 3px 6px #1e1e1e30;
+}

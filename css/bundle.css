@@ -1,0 +1,1124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SUITE', sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    color: #1e1e1e;
+    min-width: 1450px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    background: #CDA85F;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: none;
+    background: transparent;
+}
+
+/* 폭 1420px */
+
+#loginbenefitbg {
+    background-color: #F3E8CB;
+    color: #CDA85F;
+    text-align: center;
+    align-content: center;
+    height: 32px;
+}
+
+.loginbenefit {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.scrollTop {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 3vw;
+    z-index: 100;
+}
+
+.scrollTop a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #000;
+    color: #fff;
+    margin-bottom: 5px;
+    border-radius: 50%;
+}
+
+#header {
+    width: 1420px;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    width: 10%;
+    margin: 0 auto;
+    padding: 50px 0 30px;
+    box-sizing: border-box;
+}
+
+.sideicon_link {
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    display: flex;
+    width: 134px;
+    justify-content: space-around;
+}
+
+.sideicon_link>li {
+    width: 20%;
+    position: relative;
+}
+
+.sideicon_color {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.sideicon_link>li:hover .sideicon_color {
+    opacity: 1;
+}
+
+.sideicon_link>li:hover .sideicon {
+    opacity: 0;
+}
+
+/* 메뉴 시작 */
+
+#gnbwrap {
+    top: -1px;
+    height: 61px;
+}
+
+.gnb {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.origin_gnb>li {
+    width: 12%;
+}
+
+.gnb>li>a {
+    padding: 20px 0 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.lnb_bg {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    height: 370px;
+    width: 100%;
+    margin-left: calc(-50vw + 50%);
+    display: block;
+    background-color: #f9f5e9e0;
+    box-shadow: 0px 13px 10px #F3E8CB80 inset;
+}
+
+.lnb {
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 50;
+}
+
+.lnb>ul>li>a {
+    padding: 8px 10px;
+}
+
+.lnb>ul>li a:hover {
+    font-weight: 600;
+    color: #CDA85F;
+}
+
+.seemore {
+    width: 20%;
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.seemore_color {
+    position: relative;
+    top: -55px;
+    width: 20.7%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.seemore_color:hover {
+    opacity: 1;
+}
+
+.seemore_color:hover .seemore {
+    display: none;
+}
+
+.gnb_above {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.search_wrap {
+    position: relative;
+}
+
+.lnb_img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 150px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.lnb_menu_glance {
+    position: absolute;
+    top: 50px;
+    left: -270px;
+    width: 250px;
+    height: 260px;
+    text-align: center;
+    line-height: 20px;
+    border-right: #CDA85F 2px dashed;
+}
+
+.lnb_menu_glance h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #CDA85F;
+    padding-bottom: 8px;
+}
+
+.lnb_menu_glance p {
+    font-size: 13px;
+}
+
+#header2 {
+    width: 100%;
+    height: 110px;
+    transition: top 0.2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+.header2_logo {
+    width: 9%;
+    padding: 15px 0 0;
+    box-sizing: border-box;
+}
+
+#header2_inner {
+    width: 1420px;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+}
+
+.header2_sideicon_link {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    display: flex;
+    width: 134px;
+    justify-content: space-around;
+}
+
+.header2_gnb_above {
+    width: 100%;
+    position: relative;
+}
+
+.header2_gnb {
+    width: 1020px;
+    margin: 0 auto;
+    transform: translateY(-70px);
+}
+
+.header2_gnb>li {
+    width: 16.7%;
+}
+
+.header2_lnb_bg {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    height: 370px;
+    /* 최고다 */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* 페이지 전체 너비 쓰기 */
+    display: block;
+    background-color: #f9f5e9e0;
+    box-shadow: 0px 13px 10px #F3E8CB80 inset;
+}
+
+.header2_lnb {
+    padding-top: 50px;
+}
+
+.nav-up {
+    top: -110px !important;
+    /*헤더 높이와 같이*/
+}
+
+.nav-down {
+    top: 0px !important;
+}
+
+/* 메뉴 끝 */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+.footerbg {
+    height: 393px;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+#footer {
+    width: 1420px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.logo_white2 {
+    width: 20%;
+    padding: 50px 0 30px;
+    box-sizing: border-box;
+}
+
+#footer ul {
+    padding-bottom: 30px;
+}
+
+.footer_left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sns {
+    float: right;
+    margin-top: 50px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns li {
+    width: 45px;
+    position: relative;
+}
+
+.footer_icon {
+    opacity: 20%;
+}
+
+.footer_coloricon {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.footer_right li:hover .footer_coloricon {
+    opacity: 1;
+}
+
+.footer_rightlink {
+    width: 346px;
+    justify-content: space-between;
+    display: flex;
+    float: right;
+}
+
+.footer_rightlink li {
+    padding-bottom: 10px;
+}
+
+.footer_rightlink h3 {
+    color: #FED5A3;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.footer_rightlink p:hover {
+    text-decoration: underline;
+}
+
+/* 공통 꾸미기 끝 */
+
+
+
+
+/* BUNDLE CSS START */
+
+.subpage_commonContent {
+    height: max-content;
+    width: 100%;
+    margin-left: calc(-50vw + 50%);
+    background-image: url(../images/constellation_origin.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 49.5%;
+    position: relative;
+    z-index: 100;
+}
+
+.subpage_banner_opacity {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.204);
+}
+
+.subpage_commonCormorant_title {
+    width: max-content;
+    margin: 0 auto;
+    font-size: 50px;
+    font-family: "Cormorant Infant";
+    font-style: italic;
+    padding: 150px 0 110px;
+}
+
+#bundle-wrap {
+    width: 1420px;
+    margin: 0 auto;
+    height: fit-content;
+    padding-bottom: 50px;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    align-items: first baseline;
+    padding: 20px 0;
+}
+
+.breadcrumb img {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+}
+
+.breadcrumb p {
+    padding: 5px;
+}
+
+.bundleimg-tap {
+    width: 935px;
+    height: 780px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.on {
+    width: 142px;
+    height: 100%;
+}
+
+.prev-bundleimg {
+    /* 새로운 ul 이라서 height 를 적어줘야 되는 구만... */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prev-bundleimg li {
+    height: 142px;
+    overflow: hidden;
+}
+
+.prev-bundleimg img {
+    display: block;
+    width: 103%;
+    transform: translateY(15%) scale(130%);
+}
+
+.target-bundleimg {
+    width: 780px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.target-bundleimg img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: translateY(15%) scale(180%);
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    transform: scaleX(-100%);
+    transition: all 0.5s ease;
+}
+
+.target-bundleimg img.scaledup {
+    transform: translateY(15%) scale(3);
+}
+
+.bundlebracket a {
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    background-color: #1e1e1e56;
+    align-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.bundlebracket_prev {
+    left: 0;
+    border-radius: 0 12px 12px 0;
+}
+
+.bundlebracket_next {
+    right: 0;
+    border-radius: 12px 0 0 12px;
+}
+
+.bundle-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-wrap {
+    width: 465px;
+    position: relative;
+}
+
+.item-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.item-title {
+    font-size: 45px;
+    line-height: 56px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-family: "Cormorant Infant";
+    font-style: italic;
+    color: #CDA85F;
+    font-size: 29px;
+}
+
+.price span {
+    font-family: 'SUITE', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    padding: 3px 5px;
+    background-color: #F59091;
+    border-radius: 2px;
+    color: white;
+    margin-left: 10px;
+}
+
+.item-description {
+    font-weight: 300;
+}
+
+.delivery {
+    font-size: 13px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.option-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.option {
+    overflow: hidden;
+    padding: 10px 10px;
+    border-bottom: #1e1e1e96 1px solid;
+}
+
+.option1st {
+    border-top: #1e1e1e96 1px solid;
+}
+
+.option_title {
+    float: left;
+}
+
+.angle-bracket {
+    width: 13px;
+    float: left;
+    margin-right: 10px;
+}
+
+.option_info {
+    border-bottom: #1e1e1e96 1px solid;
+    padding: 10px 30px;
+    display: none;
+}
+
+.option_info li {
+    margin: 5px 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked+label .chk-box {
+    border-color: #CDA85F;
+}
+
+input[type="checkbox"]:checked+label {
+    color: #CDA85F;
+    font-weight: 400;
+}
+
+.custom-chk+label {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+.custom-chk+label .chk-box {
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #1e1e1e95;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.custom-chk:checked+label .chk-box {
+    background-color: #CDA85F;
+}
+
+.custom-chk:checked+label .chk-box::before,
+.custom-chk:checked+label .chk-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform-origin: center bottom;
+    background-color: white;
+}
+
+.custom-chk:checked+label .chk-box::before {
+    width: 1px;
+    height: 6px;
+    left: 60%;
+    transform: translate(-250%, -62%) rotate(40deg);
+}
+
+.custom-chk:checked+label .chk-box::after {
+    width: 1px;
+    height: 5px;
+    left: 43%;
+    transform: translate(0%, -40%) rotate(-35deg);
+}
+
+.turn .option img {
+    transform: rotate(90deg);
+}
+
+.angle-bracket img {
+    transition: transform 0.5s;
+}
+
+.click-to-purchse {
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 0;
+}
+
+.click-to-purchse p {
+    font-weight: 600;
+    background-color: #FFEFDC;
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: #F59091;
+}
+
+.click-to-purchse p:hover {
+    background-color: #F59091;
+    color: white;
+}
+
+.click-to-purchse img {
+    height: 40px;
+}
+
+.ctp_icon {
+    position: relative;
+}
+
+.ctp_coloricon {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: none;
+}
+
+.ctp_icon:hover .ctp_coloricon {
+    display: block;
+}
+
+.tabwrap {
+    width: 1420px;
+    margin: 0 auto;
+    position: relative;
+    height: 800px;
+}
+
+#tab {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-weight: 200;
+}
+
+#tab>li {
+    width: 10%;
+}
+
+#tab>li>a{
+    text-align: center;
+}
+
+#tab>li>a:hover {
+    text-decoration: underline;
+}
+
+#tab>li>a {
+    padding: 20px 30px;
+}
+
+.tab_text {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    height: max-content;
+}
+
+.tab_text1{
+    border-top: 1px solid #1e1e1e74;
+    border-bottom: 1px solid #1e1e1e74;
+}
+
+.tab_text1 p{
+    padding: 20px 0;
+}
+
+.star-rating_average {
+    font-style: normal;
+    font-size: 30px;
+}
+
+.tab_review {
+    font-family: 'MapoGoldenPier';
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.tab_subtitle {
+    font-family: "Cormorant Infant";
+    font-style: italic;
+}
+
+.tab_subtitle1 {
+    padding-bottom: 20px;
+}
+
+.tab_subtitle2 {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #1e1e1e;
+    width: fit-content;
+    padding-right: 5px;
+}
+
+.reviews>li {
+    display: flex;
+    padding: 20px 0 60px;
+    border-bottom: 1px solid #1e1e1e74;
+}
+
+.reviews>li:nth-child(1){
+    border-top: 1px solid #1e1e1e74;
+}
+
+.review_id{
+    font-weight: 400;
+}
+
+.review_date{
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.reviews_customerInfo{
+    width: 250px;
+}
+
+.pagebtn {
+    width: 200px;
+    height: fit-content;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.pagebtn a {
+    opacity: 0.5;
+}
+
+.pagebtn a:hover {
+    opacity: 1;
+}
+
+.pagebtn li {
+    width: calc(100%);
+}
+/* BUNDLE CSS END */
+
+
+/* Swiper START */
+#swiperBg {
+    height: 605px;
+    background-color: #F3E8CB70;
+    font-size: 18px;
+    align-content: center;
+    padding-bottom: 30px;
+}
+
+
+#swiperWrap {
+    width: 1620px;
+    margin: 0 auto;
+    position: relative;
+    height: 450px;
+}
+
+.title {
+    font-family: "Cormorant Infant";
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 60px;
+}
+
+.swiper {
+    width: 1420px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.swiper-slide {
+    width: 262px !important;
+    height: 370px !important;
+}
+
+.swiper-slide>a {
+    height: 262px;
+    overflow: hidden;
+    background-color: #CDA85F;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide>a>img {
+    transform: scale(100%);
+    transition: all 0.8s;
+}
+
+.swiper-slide>a>img:hover {
+    transform: scale(150%);
+    transition: all 0.8s;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 27px;
+    height: 27px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 35% !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 27px;
+    /* 화살표 크기 */
+    color: #1e1e1e89;
+    /* 화살표 색상 */
+}
+
+.swiper-pagination-bullet {
+    background-color: #ffffff !important;
+    /* 기본 원 색상 */
+    opacity: 50% !important;
+    width: 17px !important;
+    /* 원의 너비 */
+    height: 17px !important;
+    /* 원의 높이 */
+    border-radius: 50%;
+    /* 원 형태 유지 */
+    margin: 0 12px !important;
+    /* 동그라미 간의 간격 */
+    border: #1e1e1e70 1px solid;
+
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #F3E8CB !important;
+    opacity: 1 !important;
+    /* 활성화된 원 색상 */
+    border: #F3E8CB 1px solid;
+}
+
+.description_new {
+    font-weight: 600;
+}
+
+.price_new {
+    font-family: "Cormorant Infant";
+    font-style: italic;
+    color: #CDA85F;
+    font-size: 18px;
+    position: absolute;
+}
+
+.cart_new {
+    width: 30px;
+    float: right;
+    position: relative;
+    top: 0px;
+}
+
+.circle_cart_color {
+    position: relative;
+    top: -36.9px;
+    display: none;
+}
+
+.cart_new:hover .circle_cart_color,
+.heart_new:hover .circle_heart_color {
+    display: block;
+}
+
+.cart_new:hover .circle_cart,
+.heart_new:hover .circle_heart {
+    opacity: 0;
+}
+
+.heart_new {
+    width: 33px;
+    float: right;
+    position: absolute;
+    top: -255px;
+    right: 13px;
+}
+
+.circle_heart_color {
+    position: relative;
+    top: -39.5px;
+    display: none;
+}
+
+.new_description {
+    position: relative;
+    top: 5px;
+}
+
+/* Swiper END */
+
+
+#recommendation-bg {
+    height: 895px;
+    background-image: url(../images/shadows.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    align-content: center;
+}
+
+.recommendation{
+    width: 1420px;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+.recommendation ul{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rec-item{
+    width: 315px;
+    height: 377px;
+    overflow: hidden;
+    background-color: #1e1e1e;
+    position: relative;
+}
+
+.rec-item img{
+    object-fit: cover;
+    transform: scale(70%) translate(-30%, -25%);
+}
+
+.rec-undermark{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-family: "Cormorant Infant";
+    font-style: italic;
+}
+
+.rec-heart{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 20%;
+    z-index: 10;
+}
+
+.rec-heart img{
+    position: absolute;
+    right: 0;
+}
+
+.rec-heart_coloricon{
+    display: none;
+}
+
+.rec-heart:hover .rec-heart_coloricon{
+    display: block;
+}
+
+.rec-tpbox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #231e3969;
+    color: white;
+    text-shadow: 0 3px 3px #f3e8cb7d;
+    align-content: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.rec-item:hover .rec-tpbox{
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 1.3s ease;
+}
+
+.rec-tpbox p{
+    padding: 7px 0;
+    transform: translateY(50%);
+}
+
+.rec-title{
+    font-size: 28px;
+    padding-bottom: 8px;
+}
+
+.click-rec{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.rec-price{
+    background-color: #231E39;
+    font-family: "Cormorant Infant";
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 7px; 
+}
+
+.rec-price span{
+    font-weight: 200;
+    font-style: normal;
+}

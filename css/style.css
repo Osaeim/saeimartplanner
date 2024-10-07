@@ -1,0 +1,1447 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SUITE', sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    color: #1e1e1e;
+    min-width: 1450px;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-button{
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    background: #CDA85F;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: none;
+    background: transparent;
+}
+
+/* 폭 1420px */
+
+#loginbenefitbg {
+    background-color: #F3E8CB;
+    color: #CDA85F;
+    text-align: center;
+    align-content: center;
+    height: 32px;
+}
+
+.loginbenefit {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.scrollTop {
+    position:fixed;
+    bottom:10px;
+    right:20px;
+    width:3vw;
+    z-index: 100;
+}
+    
+.scrollTop a{
+    display:inline-block;
+    padding:10px 15px;
+    background:#000;
+    color:#fff;
+    margin-bottom:5px;
+    border-radius:50%;
+}
+
+#header {
+    width: 1420px;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    width: 10%;
+    margin: 0 auto;
+    padding: 50px 0 30px;
+    box-sizing: border-box;
+}
+
+.search {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    z-index: 99;
+    /* 헤더에 .search가 들어가서 .gnb 아래에 깔려 검색기능이
+    되지 않기에 z-index 가 필요. */
+}
+
+.search input {
+    width: 164px;
+    height: 29px;
+    border-radius: 20px;
+    font-family: 'SUITE-Regular';
+    font-size: 15px;
+    padding-left: 10px;
+    background-color: none;
+    border-color: #1e1e1e50;
+}
+
+input:focus {
+    border: 2px solid #1e1e1e50;
+    /* 포커스 상태에서도 동일한 테두리 설정 */
+    outline: none;
+    /* 포커스 시 기본 outline 제거 */
+}
+
+.search img {
+    width: 25px;
+    padding-top: 2px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    opacity: 25%;
+}
+
+.sideicon_link {
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    display: flex;
+    width: 134px;
+    justify-content: space-around;
+}
+
+.sideicon_link>li {
+    width: 20%;
+    position: relative;
+}
+
+.sideicon_color {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.sideicon_link>li:hover .sideicon_color {
+    opacity: 1;
+}
+
+.sideicon_link>li:hover .sideicon {
+    opacity: 0;
+}
+
+
+
+/* 메뉴 시작 */
+
+#gnbwrap {
+    height: 61px;
+    padding-bottom: 13px;
+}
+
+.gnb {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.origin_gnb>li {
+    width: 12%;
+}
+
+.gnb>li>a {
+    padding: 20px 0 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.lnb_bg {
+    position: absolute;
+    top: 272px;
+    left: 0;
+    z-index: 10;
+    height: 370px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    display: block;
+    background-color: #f9f5e9e0;
+    box-shadow: 0px 13px 10px #F3E8CB80 inset;
+}
+
+.lnb {
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 50;
+}
+
+.lnb>ul>li>a {
+    padding: 8px 10px;
+}
+
+.lnb>ul>li a:hover {
+    font-weight: 600;
+    color: #CDA85F;
+}
+
+.seemore {
+    width: 20%;
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.seemore_color {
+    position: relative;
+    top: -55px;
+    width: 20.7%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.seemore_color:hover {
+    opacity: 1;
+}
+
+.seemore_color:hover .seemore{
+    display: none;
+}
+
+.gnb_above {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.search_wrap{
+    position: relative;
+}
+
+.lnb_img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 150px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.lnb_menu_glance {
+    position: absolute;
+    top: 50px;
+    left: -270px;
+    width: 250px;
+    height: 260px;
+    text-align: center;
+    line-height: 20px;
+    border-right: #CDA85F 2px dashed;
+}
+
+.lnb_menu_glance h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #CDA85F;
+    padding-bottom: 8px;
+}
+
+.lnb_menu_glance p {
+    font-size: 13px;
+}
+
+#header2 {
+    width: 100%;
+    height: 110px;
+    transition: top 0.2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+.header2_logo {
+    width: 9%;
+    padding: 15px 0 0;
+    box-sizing: border-box;
+}
+
+#header2_inner{
+    width: 1420px;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+}
+
+.header2_sideicon_link{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    display: flex;
+    width: 134px;
+    justify-content: space-around;
+}
+
+.header2_gnb_above{
+    width: 100%;
+    position: relative;
+}
+
+.header2_gnb{
+    width: 1020px;
+    margin: 0 auto;
+    transform: translateY(-70px);
+}
+
+.header2_gnb>li {
+    width: 16.7%;
+}
+
+.header2_lnb_bg{
+    position: absolute;
+    top: 83px;
+    left: 0;
+    height: 370px;
+    /* 최고다 */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* 페이지 전체 너비 쓰기 */
+    display: block;    
+    background-color: #f9f5e9e0;
+    box-shadow: 0px 13px 10px #F3E8CB80 inset;
+}
+
+.header2_lnb{
+    padding-top: 50px;
+}
+
+.nav-up {
+    top: -110px !important;
+    /*헤더 높이와 같이*/
+  }
+
+  .nav-down {
+    top: 0px !important;
+  }
+
+/* 메뉴 끝 */
+
+
+#content1 {
+    height: 960px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url(../images/endingbanner_modern_minimalist_office.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content1_text {
+    height: 700px;
+    text-align: center;
+    padding-top: 150px;
+    box-sizing: border-box;
+}
+
+.content1_kr {
+    font-family: 'MapoGoldenPier';
+    font-size: 50px;
+    padding-bottom: 50px;
+    color: white;
+    text-shadow: 0px 0px 5px #535353;
+}
+
+.content1_eng {
+    font-family: "Cormorant Infant";
+    font-style: italic;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 0px 5px #535353;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.content1_kr,
+.content1_eng {
+    /* Apply the default fadeIn animation */
+    animation: fadeInCustom 4s ease-in-out;
+    /* Override duration and timing function */
+}
+
+.content1_eng {
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    /* Keeps the final state after animation ends */
+    /* Ensure the element is visible after the animation ends */
+}
+
+@keyframes fadeInCustom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Optional: to add a slight vertical movement */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 1st Swiper START */
+#swiperBg {
+    height: 874px;
+    margin: 0px auto;
+    background-image: url(../images/shadows.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 18px;
+    padding: 90px 0 50px;
+}
+
+#swiperWrap {
+    width: 1620px;
+    margin: 0 auto;
+    position: relative;
+    height: 500px;
+}
+
+.title {
+    font-family: "Cormorant Infant";
+    text-align: center;
+    font-size: 45px;
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+.swiper {
+    width: 1420px;
+    /* 이미지(262px*5=1310px) + 사이 여백(27.5px씩) */
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.swiper-slide {
+    width: 262px !important;
+    height: 370px !important;
+    /* background-color: #CDA85F; */
+}
+
+.swiper-slide>a {
+    height: 262px;
+    overflow: hidden;
+    background-color: #CDA85F;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide>a>img {
+    transform: scale(100%);
+    transition: all 0.8s;
+}
+
+.swiper-slide>a>img:hover {
+    transform: scale(150%);
+    transition: all 0.8s;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 27px;
+    height: 27px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 35% !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 27px;
+    /* 화살표 크기 */
+    color: #1e1e1e89;
+    /* 화살표 색상 */
+}
+
+.swiper-pagination-bullet {
+    background-color: #ffffff !important;
+    /* 기본 원 색상 */
+    opacity: 50% !important;
+    width: 17px !important;
+    /* 원의 너비 */
+    height: 17px !important;
+    /* 원의 높이 */
+    border-radius: 50%;
+    /* 원 형태 유지 */
+    margin: 0 12px !important;
+    /* 동그라미 간의 간격 */
+    border: #1e1e1e70 1px solid;
+
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #F3E8CB !important;
+    opacity: 1 !important;
+    /* 활성화된 원 색상 */
+    border: #F3E8CB 1px solid;
+}
+
+.description_new {
+    font-weight: 600;
+}
+
+.price_new {
+    font-family: "Cormorant Infant";
+    font-style: italic;
+    color: #CDA85F;
+    font-size: 18px;
+    position: absolute;
+}
+
+.cart_new {
+    width: 30px;
+    float: right;
+    position: relative;
+    top: 0px;
+}
+
+.circle_cart_color {
+    position: relative;
+    top: -36.9px;
+    display: none;
+}
+
+.cart_new:hover .circle_cart_color,
+.heart_new:hover .circle_heart_color {
+    display: block;
+}
+
+.cart_new:hover .circle_cart,
+.heart_new:hover .circle_heart {
+    opacity: 0;
+}
+
+.heart_new {
+    width: 33px;
+    float: right;
+    position: absolute;
+    top: -260px;
+    right: 10px;
+}
+
+.circle_heart_color {
+    position: relative;
+    top: -39.5px;
+    display: none;
+}
+
+.new_description {
+    position: absolute;
+    top: 270px;
+}
+
+/* 1st Swiper END */
+
+
+#content2 {
+    height: 564px;
+    margin: 0 auto;
+    font-size: 17px;
+    text-align: center;
+    background-image: url(../images/endingbanner_modern_minimalist_office.jpg);
+    background-attachment: fixed;
+    background-size: 1920px 970px;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content: center;
+}
+
+.brand_intro {
+    background-color: #cda85f90;
+    color: white;
+    height: 265px;
+    align-content: center;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.brand_intro p {
+    padding: 30px 0 30px;
+}
+
+.smallborder {
+    width: 40px;
+    margin: 0 auto;
+    border: white 1px solid;
+}
+
+.logo_white {
+    width: 93px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+/* 2nd Swiper START */
+#swiperBg2 {
+    height: 830px;
+    margin: 0 auto;
+    background-image: url(../images/shadow_top_sharp.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    font-size: 18px;
+    padding-top: 90px;
+}
+
+/* 스크롤바의 트랙(배경) */
+.swiper-scrollbar {
+    background-color: #ffffff !important;
+    /* 스크롤바 트랙의 배경색 */
+    height: 12px !important;
+    /* 스크롤바의 높이 */
+    border-radius: 4px;
+    /* 트랙의 둥글기 */
+    border: 1px solid #F3E8CB;
+    position: absolute;
+    bottom: 30px !important;
+    width: 90% !important;
+    left: 4.5% !important;
+}
+
+/* 스크롤바의 핸들(Thumb) */
+.swiper-scrollbar-drag {
+    background-color: #CDA85F !important;
+    /* 스크롤바 핸들의 색상 */
+    height: 100%;
+    /* 핸들의 높이 (가로 방향 스와이퍼일 경우 전체 높이) */
+    border-radius: 4px;
+    /* 핸들의 둥글기 */
+}
+
+.swiper-imgbox {
+    width: 100%;
+    height: 262px;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-imgbox>a>img {
+    width: 100%;
+    height: 262px;
+    object-fit: cover;
+}
+
+.swiper_textbox {
+    position: absolute;
+    top: 262px;
+    padding-top: 10px;
+    width: 100%;
+    height: 90px;
+}
+
+.tp_box {
+    width: 262px;
+    height: 100px;
+    background-color: #CDA85F67;
+    box-sizing: border-box;
+    position: absolute;
+    top: 162px;
+    transform: translateY(100px);
+    transition: all 0.8s;
+    opacity: 0;
+}
+
+.tp_box ul {
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 32px;
+}
+
+.tp_box>ul>li {
+    width: 16%;
+    height: 100%;
+}
+
+.tp_box_coloricon {
+    position: relative;
+    top: -38.7px;
+    display: none;
+}
+
+.tp_box>ul>li:hover .tp_box_coloricon {
+    display: block;
+}
+
+.swiper-imgbox:hover .tp_box {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.cart_new:hover .circle_cart_color2 {
+    display: block;
+}
+
+.circle_cart_color2 {
+    display: none;
+    position: relative;
+    top: -37px;
+}
+
+/* 2nd Swiper END */
+
+
+.content3_bg {
+    height: 830px;
+    margin: 0 auto;
+    background-image: url(../images/shadow_bottom_sharp.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-content: center;
+}
+
+#content3 {
+    width: 1420px;
+    height: 594px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.content3_img {
+    width: 594px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content3_img>img:hover {
+    transform: scale(110%);
+    transition: all 0.8s;
+}
+
+.content3_img>img {
+    transform: scale(100%);
+    transition: all 0.8s;
+}
+
+.content3_text {
+    width: 435px;
+    padding: 0 30px 0 50px;
+    border-right: 1px dashed #dddddd;
+}
+
+.content3_text h3 {
+    color: #6B6866;
+    padding-bottom: 10px;
+}
+
+.content3_text h2 {
+    font-size: 45px;
+    line-height: 65px;
+    padding-bottom: 25px;
+}
+
+.content3_text>a {
+    width: 82px;
+    height: 42px;
+    border: 1px solid #3D7C8A;
+    color: #3D7C8A;
+    font-size: 20px;
+    font-weight: 300;
+    align-content: center;
+    margin-top: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 20px;
+    background-color: white;
+    padding: 10px 30px;
+    margin: 0 auto;
+}
+
+.btn1 {
+    position: relative;
+    top: 30px;
+    border: 1px solid #3D7C8A;
+    color: #3D7C8A;
+    box-shadow: 0 5px 6px #3d7c8a4d;
+    margin-top: 20px;
+}
+
+.btn1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 300%;
+    width: 150%;
+    background: #3d7c8a96;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn1:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.btn_text {
+    position: relative;
+    z-index: 10
+}
+
+.btn:hover .btn_text {
+    color: white;
+}
+
+.subtitle {
+    color: #3D7C8A;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.content3_text p {
+    font-size: 17px;
+    padding-bottom: 16px;
+}
+
+.swiper3rd {
+    height: 100%;
+    width: max-content;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.star-ratings {
+    width: max-content;
+    -webkit-text-fill-color: transparent;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #FED5A3;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.star-ratings span {
+    padding: 0 3px;
+}
+
+.swiper3rd .swiper-slide {
+    height: max-content !important;
+}
+
+.swiper3rd_review {
+    font-size: 14px;
+}
+
+.swiper3rd_review_id {
+    float: right;
+}
+
+
+
+
+#content4 {
+    width: 1840px;
+    margin: 0 auto;
+    height: max-content;
+}
+
+.flowtext {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s;
+    font-size: 44px;
+    font-weight: 300;
+    font-family: "Cormorant Upright";
+    padding: 10px 0 30px 0;
+    color: #6B6866;
+}
+
+.flowtext p {
+    animation: textLoop 15s linear infinite;
+    padding-right: 50px;
+}
+
+@keyframes textLoop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.content4_imgwrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content4_horizontal {
+    width: 1220px;
+    height: 800px;
+}
+
+.content4_vertical {
+    width: 618px;
+    height: 800px;
+}
+
+.content4_img {
+    box-sizing: border-box;
+    overflow: hidden;
+    filter: sepia(100%) brightness(70%);
+    transition: all 0.8s;
+    position: relative;
+}
+
+.content4_img:hover {
+    filter: sepia(0) brightness(1);
+    transition: all 0.8s;
+}
+
+.content4_text {
+    position: absolute;
+    top: 40%;
+    left: 22%;
+    color: white;
+    text-align: center;
+    line-height: 42px;
+    text-shadow: 0px 3px 6px #FED5A3;
+    opacity: 0;
+}
+
+.content4_text_bottom {
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    color: white;
+    text-align: center;
+    line-height: 42px;
+    text-shadow: 0px 3px 6px #FED5A3;
+    opacity: 0;
+}
+
+.content4_text_right {
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    color: white;
+    text-align: right;
+    line-height: 42px;
+    text-shadow: 0px 3px 6px #FED5A3;
+    opacity: 0;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* 아래에서 위로 이동하는 효과 */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* 원래 위치로 이동 */
+    }
+}
+
+.content4_img:hover .content4_text,
+.content4_img:hover .content4_text_bottom,
+.content4_img:hover .content4_text_right {
+    animation: up 1s ease-in forwards;
+    opacity: 1;
+}
+
+.content4_img_animation {
+    transform: scale(100%);
+    transition: all 1.5s;
+}
+
+.content4_img:hover .content4_img_animation {
+    transform: scale(102%);
+    transition: all 1.5s;
+}
+
+.content4_title {
+    font-family: "Cormorant Infant";
+    font-size: 120px;
+    padding-bottom: 90px;
+}
+
+.content4_title2 {
+    font-family: "Cormorant Infant";
+    font-size: 53px;
+    padding-bottom: 15px;
+}
+
+.content4_title3 {
+    font-family: "Cormorant Infant";
+    font-size: 53px;
+    padding-bottom: 20px;
+}
+
+.content4_title4 {
+    font-family: "Cormorant Infant";
+    font-size: 82px;
+    padding-bottom: 60px;
+}
+
+.content4_description {
+    font-size: 33px;
+    font-weight: 300;
+}
+
+.content4_description2 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+#content5 {
+    width: 100%;
+    height: 1220px;
+    background-image: url(../images/texture_paper.png);
+    background-position: center;
+    background-size: contain;
+    display: flex;
+}
+
+.content5_bg {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+.papertexture1 {
+    margin-top: 130px;
+    padding: 20px 10px 0 30px;
+    width: 896px;
+    height: 723px;
+    background-image: url(../images/texture_paper_placeon.png);
+    box-sizing: border-box;
+    border-radius: 0 263px 0 0;
+}
+
+.papertexture_title {
+    font-family: "Cormorant Infant";
+    font-size: 27px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.border {
+    width: 100%;
+    border: #5d5d5d 1px solid;
+}
+
+.membership_wrap {
+    display: flex;
+    margin-top: 20px;
+}
+
+.membership {
+    position: relative;
+    width: 398px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 300px 300px 0 0;
+}
+
+.membership img {
+    display: block;
+    /* 애매한 여유분은 물럿거랏! */
+}
+
+.membership_tpbox {
+    width: 100%;
+    height: 100%;
+    border-radius: 300px 300px 0 0;
+    background-color: #5d5d5d;
+    opacity: 20%;
+    filter: brightness(0);
+}
+
+.membership_text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 0px 3px 6px #fed5a35a;
+}
+
+.membership_text h2 {
+    font-family: "Cormorant Infant";
+    font-size: 52px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: white;
+    text-shadow: 0 3px 6px #fed5a3;
+}
+
+.membership_text p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #F3E8CB;
+    text-shadow: 0 3px 6px #fed5a3;
+}
+
+.btn2 {
+    border: 1px solid #FED5A3;
+    color: #FFC278;
+    box-shadow: 0 5px 6px #fed5a37e;
+    position: relative;
+    top: 20px;
+}
+
+.btn2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 300%;
+    width: 165%;
+    background: #fed5a396;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn2:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.membership_leftwrap {
+    text-align: center;
+}
+
+.membership_leftwrap>p {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 33px;
+}
+
+.membership_transform {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+    transform: translateY(100%);
+    transition: all 1.3s;
+    opacity: 0;
+}
+
+.membership:hover .membership_transform {
+    transform: translateY(0%);
+    transition: all 1.3s;
+    opacity: 1;
+}
+
+.membership_rightwrap {
+    width: 430px;
+    margin-left: 30px;
+}
+
+.benefit {
+    display: flex;
+    width: 100%;
+    height: 175px;
+}
+
+.benefit_text {
+    line-height: 24px;
+    position: relative;
+    font-weight: 400;
+}
+
+.benefit_text h2 {
+    color: #231E39;
+    font-size: 23px;
+    padding-bottom: 10px;
+}
+
+.benefit_text p {
+    font-size: 15px;
+}
+
+.benefit>img {
+    width: 150px;
+    border-radius: 28px;
+    margin-right: 15px;
+}
+
+.benefit_descriptioin {
+    position: absolute;
+    bottom: 0;
+    width: 247px;
+    padding: 5px 0 5px 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.border_margin {
+    margin: 20px 0;
+}
+
+.bd1 {
+    color: #FFC278;
+}
+
+.bd2 {
+    color: #F59091;
+}
+
+.bd3 {
+    color: #3D7C8A;
+}
+
+.fnq {
+    width: 467px;
+    float: right;
+    position: relative;
+    top: -440px;
+}
+
+.papertexture2 {
+    margin-top: 50px;
+    background-image: url(../images/texture_paper_placeon.png);
+    width: 431px;
+    height: 570px;
+}
+
+.fnq_imgwrap {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    transform: perspective(1000px);
+}
+
+.fnq_img {
+    width: 432px;
+    height: 570px;
+    background-image: url(../images/main_fnq.jpg);
+    border-radius: 253px 0 0 0;
+    overflow: hidden;
+}
+
+.fnq h2 {
+    font-family: "Cormorant Infant";
+    font-size: 52px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    opacity: 0;
+    transition: all 1s;
+    text-shadow: 0 3px 6px #fed5a38e;
+}
+
+.fnq_tp {
+    width: 100%;
+    height: 100%;
+    background-color: #F3E8CB90;
+    border-radius: 253px 0 0 0;
+    transform: perspective(400px) rotateY(0deg);
+    transition: all 1s;
+    /* backdrop-filter: blur(3px); */
+}
+
+.fnq_imgwrap:hover .fnq_tp {
+    transform: perspective(400px) rotateY(-30deg);
+    opacity: 0.5;
+    transition: all 1s;
+    /* backdrop-filter: blur(0px); */
+    mix-blend-mode: overlay;
+}
+
+.fnq:hover .fnq_imgwrap h2 {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.arrow{
+    position: absolute;
+    top: -60px;
+    right: -70px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow p{
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 3px 6px #6b686684;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow img{
+    transition: transform 0.3s ease;
+    animation: rotate-text 8s infinite linear;
+}
+
+.arrow img:hover{
+    animation-play-state: paused;
+    
+}
+
+
+@keyframes rotate-text {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.footerbg {
+    height: 393px;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+#footer {
+    width: 1420px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.logo_white2 {
+    width: 20%;
+    padding: 50px 0 30px;
+    box-sizing: border-box;
+}
+
+#footer ul {
+    padding-bottom: 30px;
+}
+
+.footer_left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sns {
+    float: right;
+    margin-top: 50px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns li {
+    width: 45px;
+    position: relative;
+}
+
+.footer_icon {
+    opacity: 20%;
+}
+
+.footer_coloricon {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+.footer_right li:hover .footer_coloricon {
+    opacity: 1;
+}
+
+.footer_rightlink {
+    width: 346px;
+    justify-content: space-between;
+    display: flex;
+    float: right;
+}
+
+.footer_rightlink li {
+    padding-bottom: 10px;
+}
+
+.footer_rightlink h3 {
+    color: #FED5A3;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.footer_rightlink p:hover {
+    text-decoration: underline;
+}
